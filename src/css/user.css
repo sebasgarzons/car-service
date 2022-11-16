@@ -1,0 +1,385 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #ffffff;
+    /* font-family: 'Poppins', sans-serif; */
+    margin: 0;
+}
+
+p, h1, h2, h3, h4, h5, h6, ul, li, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+form{
+    all: unset;
+}
+
+:root{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav{
+    width: 100%;
+    background-color: #008eaa;
+    color: #fff;
+}
+
+.nav_cont{
+    display: flex;
+    margin: auto;
+    max-width: 1600px;
+    width: 88%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.nav_cont >div:nth-of-type(1){
+    display: flex;
+    align-items: center;
+}
+
+#nav_info_usr{
+    font-size: 1.2rem;
+    text-align: right;
+}
+
+#nav_info_usr .forgt_psswrd{
+    font-size: 0.5rem;
+}
+
+nav img{
+    padding: 12px;
+    filter: invert(100%) sepia(93%) saturate(0%) hue-rotate(325deg) brightness(108%) contrast(101%);
+    transition: all 0.5s ease-in-out;
+}
+
+nav:hover img{
+    transform: scale(1.2);
+}
+
+#log_out{
+    position: absolute;
+    top: 30%;
+    right: -30px;
+}
+
+main > div{
+    width: 98%;
+    display: block;
+    margin: auto;
+    border: 1px solid #cccccc;
+    margin-top: 48px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 5%);;
+}
+
+.head{
+    width: 100%;
+    margin: auto;
+    max-width: 1600px;
+}
+
+.head h2{
+    margin: 0px;
+    padding: 8px 0px;
+}
+
+.box_reserva{
+    background-color: #002855;
+    color: #ffffff;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 1px 0px;
+    margin-bottom: 12px;
+    border: 1px solid transparent;
+}
+
+.box_res_send{
+    width: 40%;
+    margin: 22px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.box_res_send input, .box_res_send button{
+    display: block;
+}
+
+.box_res_send input{
+    padding: 18px 2px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    outline: none;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.cont{
+    display: block;
+    margin: auto;
+    width: 100%;
+    background-color: #000000;
+    margin: auto;
+    border-radius: 10px;
+    padding: 12px;
+    box-sizing: border-box;
+    object-fit: contain;
+    color: #008eaa;
+    max-width: 1600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cont h5{
+    margin: 15px 0px;
+    font-size: 26px;
+}
+
+.user{
+    gap: 28px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.user input{
+    padding: 7px;
+    border-radius: 1px;
+    border: 0.5px solid transparent;
+    width: 92%;
+    background-color: #ebf6f8;
+}
+
+.user table{
+    margin: auto;
+    display: block;
+    width: 100%;
+}
+
+.user table thead{
+    position: relative;
+    display: block;
+}
+
+#MecWash tbody{
+    width: 100%;
+    display: block;
+}
+
+#MecWash tr{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.cont button, #btn-appointment-save{
+    background-color: #002855;
+    color: #ffffff;
+    border-radius: 22px;
+    padding: 6px 18px;
+    border: 1px solid transparent;
+    display: block;
+    margin: 12px 0px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    margin: 4vh auto 1vh;
+    font-size: 1rem;
+}
+
+.cont button:hover{
+    background-color: #008eaa;
+    border: 1px solid #008eaa;
+    color: #ffffff;
+}
+
+.card_service_user{
+    color: #a9a9a9;
+    font-size: 0.9rem;
+    width: 90%;
+    margin: auto;
+    background: rgba(233, 248, 255, 0.3);
+    box-shadow: rgb(0 0 0 / 40%) 0px 4px 4px;
+    padding: 38px 28px 28px;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+}
+
+
+.btn-cards{
+    all: unset;
+    background-color: #000 !important;
+    position: absolute;
+    right: 0px;
+    top: -30px;
+    padding: 4px !important;
+    font-size: 0.7rem !important;
+}
+
+.btn-cards:nth-of-type(1){
+    right: 10px;
+}
+
+.btn-cards:nth-of-type(2){
+    right: 50px;
+}
+
+.box_card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    text-align: initial;
+    color: #ffffff;
+}
+
+.agndr_ct{
+    position: fixed;
+    background-color: #002855;
+    color: #ebf6f8;
+    padding: 1rem 3rem;
+    right: 0;
+    bottom: 25px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    cursor: pointer;
+}
+
+.box_card h2{
+    font-size: 1.3rem;
+}
+
+.box_card h2 span{
+    font-size: 1.4rem;
+}
+
+.box_card h3{
+    font-size: 1.1rem;
+}
+
+.box_card h3 span{
+    color: #7c71d7;
+}
+
+.box_card> div:nth-last-of-type(1){
+    display: flex;
+    gap: 12px;
+    font-size: 1.1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.box_card> div:nth-last-of-type(1) i{
+    font-size: 1.2rem;
+    fill: #002855;
+}
+
+.box_card> div:nth-last-of-type(1) i:before{
+    color: #3cc359;
+}
+
+.box_card> div:nth-last-of-type(1)>div{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.card_service_user .details{
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+    transition: height 2s ease;
+}
+
+.card_service_user .details summary, .card_service_user .details p{
+    transition: all 1s ease-in-out;
+}
+
+.card_service_user .details p{
+    font-weight: 600;
+}
+
+.card_service_user .details summary{
+    list-style: none;
+}
+
+.card_service_user .details>div{
+    text-align: left;
+}
+
+.makeappointment_container{
+    border-radius: 8px;
+    display: none;
+    /* height: 70vh; */
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    background-color: #ffffff;
+    padding: 1rem;
+    width: 40%;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.makeappointment_container_show{
+    display: flex;
+}
+
+.makeappointment{
+    width: 100%;
+    margin: auto;
+    border: 0.4px solid rgb(124, 124, 124);
+    border-radius: 8px;
+    padding: 28px;
+    position: relative;
+}
+
+.close_appointment{
+    position: absolute;
+    font-size: 1rem;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#appointment_form>div label{
+    display: block;
+    margin-top: 12px;
+}
+
+#appointment_form>div:nth-of-type(1) select{
+    width: 100%;
+    padding: 8px;
+}
+
+#appointment_form>div input, #appointment_form>div textarea{
+    width: 95%;
+}
+
+#appointment_form>div input{
+    border-radius: 4px;
+    outline: none;
+    border: 1px inset #a9a9a9;
+    padding: 8px;
+}
+
+#appointment_form>div:nth-of-type(2) input{
+    width: 45px;
+    padding: 4px;
+    text-align: center;
+}
+
+#appointment_form>div:nth-of-type(3) input{
+    padding: 8px 0px 8px 8px;
+}

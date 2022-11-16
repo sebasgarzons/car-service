@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App -- Register</title>
+    <link rel="stylesheet" href="css/register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <h2 class="title_login">Crear Usuario</h2>
+    <div class="cont_vertical grid">
+        <div class="cont_vertical_img">
+            <img src="img/car-wash_1.jpg" />
+        </div>
+        <div>
+            <div class="cont_login">
+                <h2>Bienvenido</h2>
+                <img src="img/car-service.png" alt="" width="250px">
+            </div>
+            <div class="formulario cont_login">
+                <form>
+                    <div class="input">
+                        <label>Usuario</label>
+                        <input id="username" type="text" name="username" placeholder="Pedro" />
+                        <label>Perfil de Usuario</label>
+                        <input list="perfs" name="perfiles" id="perfiles" placeholder="Admin-Meca-Lav-Cliente">
+                        <datalist id="perfs">
+                            <option value="Admin"></option>
+                            <option value="Mecánico"></option>
+                            <option value="Lavandero"></option>
+                            <option value="Cliente"></option>
+                        </datalist>
+                        <label>Contraseña</label>
+                        <input id="password" type="password" name="password" placeholder="Contraseña1234*" />
+                        <label>Confirmar Contraseña</label>
+                        <input id="confpassword" type="password" name="password" placeholder="Contraseña1234*" />
+                        <label>Email:</label>
+                        <input id="email" type="email" name="email" placeholder="hola@gmail.com">
+                    </div>
+                    <div class="upsendFile">
+                        <label>Archivo en caso de cliente</label>
+                        <input id="File" type="file" accept=".xlsx" value="Seleccionar archivo" name="File" />
+                        <button class="sendFile bttn_png_login" onclick="upfile()">Ingresar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="cont_vertical_img">
+            <img src="img/car-mechanic_2.jpg" />
+        </div>
+    </div>
+</body>
+
+</html>

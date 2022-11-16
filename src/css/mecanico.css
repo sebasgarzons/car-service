@@ -1,0 +1,23 @@
+.box_reserva {
+    background-color: #ffc404;
+}
+
+.cont {
+    background: #b19e1a;
+}
+
+.box_card{
+    color: #000000;
+}
+
+.box_card h3 span {
+    color: #585858;
+}
+
+.card_service_user{
+    color: #fffff3;
+}
+
+.box_card> div:nth-last-of-type(1) i:before {
+    color: #6f7cd5;
+}
