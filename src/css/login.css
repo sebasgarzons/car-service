@@ -80,12 +80,17 @@ p{
 }
 button.submit_login {
     background-color: #008eaa;
-    border:1px solid #008eaa;
+    border: 1px solid #008eaa;
     color: white;
     border-radius: 15px;
-    width: 132px;
-    height: 30px;
+    padding: 5px 11px;
     display: block;
     text-align: center;
+    margin: 1rem auto;
+    outline: none;
+}
 
+button.submit_signup{
+    background-color: #002855;
+    color: #ffffff;
 }

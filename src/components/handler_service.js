@@ -1,3 +1,8 @@
 function accept_appointment(){
-    alert('El pedido ha sido aceptado éxitosamente')
+    $('.cont_succesful_appointment').fadeToggle();
+
+    setTimeout(function (){
+        $('.cont_succesful_appointment').fadeOut();
+    }, 4000)
 }
+

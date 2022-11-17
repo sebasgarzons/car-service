@@ -21,8 +21,8 @@ const firebaseConfig = {
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app)
 /* export const db = getFirestore(app) */
-console.log('Llegué a Firebase')
-console.log(app)
+/* console.log('Llegué a Firebase')
+console.log(app) */
 
 // Conexión DB
 const db = getFirestore()
@@ -48,3 +48,9 @@ export const updateAppointment = (id, newFields) => updateDoc(doc(db, 'appointme
     descripción: Acholchado
 
 */
+
+export const saveDataUser = (id, user, email, perf, password, conf_password) => {
+    addDoc(collection(db, 'user_data'), {id, user, email, perf, password, conf_password })
+}
+
+export const getDataUser =  () => getDocs(collection(db, 'user_data'))

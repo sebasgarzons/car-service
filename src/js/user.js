@@ -7,15 +7,12 @@ const appointmentsContainer = document.getElementById('cont_cards')
 let editStatus = false
 let id = ''
 
-function showLogin(){
-    setTimeout(function(){
-        console.log('HOLA!')
-    }, 1888);
-}
-
-showLogin();
-
 window.addEventListener('DOMContentLoaded', async() => {
+
+    let email_data = JSON.parse(window.localStorage.getItem('email_user'));
+
+    document.getElementById('user_name_email').innerText = email_data
+
     /* const querySnapshot = await getAppointments() */
     onGetAppointments((querySnapshot) => {
         let html = ''
@@ -61,7 +58,6 @@ window.addEventListener('DOMContentLoaded', async() => {
         appointmentsContainer.innerHTML = html
 
       const btnsDelete = appointmentsContainer.querySelectorAll('.btn-delete')
-        console.log(btnsDelete)
 
           btnsDelete.forEach(btn => {
             btn.addEventListener('click', ({target: {dataset }}) => {
@@ -75,9 +71,8 @@ window.addEventListener('DOMContentLoaded', async() => {
                 const doc = await getAppointment(e.target.dataset.id)
                 
                 const Appointment = doc.data()
-                console.log(Appointment)
 
-                $(".makeappointment_container").toggleClass('makeappointment_container_show');
+                $(".cont_make_appointment").fadeToggle();
                 appointmentForm['appoint_tp_srvc'].value = Appointment.type_of_service
                 appointmentForm['appoint_hr'].value = Appointment.appoint_hour
                 appointmentForm['appoint_dir'].value = Appointment.dir
@@ -102,16 +97,10 @@ appointmentForm.addEventListener('submit', (e) => {
     const dir = appointmentForm['appoint_dir']
     const description = appointmentForm['appoint-desc']
 
-    /* console.log(tp_srvc.value, hr_frst.value, hr_scnd.value, dir.value, description.value) */
-    /* saveAppointment(tp_srvc.value, hr_frst.value, hr_scnd.value, dir.value, description.value) */
-
-
-
     if (!editStatus){
         saveAppointment(tp_srvc.value, hr.value, dir.value, description.value)
         appointmentForm.reset() 
     }else{
-        console.log('Updating!')
         updateAppointment(id, {
             type_of_service: tp_srvc.value, 
             appoint_hour: hr.value,
@@ -122,9 +111,9 @@ appointmentForm.addEventListener('submit', (e) => {
         appointmentForm['btn-appointment-save'].innerText = 'Guardar'
         editStatus = false;
     }
-    $(".makeappointment_container").toggleClass('makeappointment_container_show');
+    $(".cont_make_appointment").fadeToggle();
 })
 
 $(".agndr_ct, .close_appointment").click(function () {
-    $(".makeappointment_container").toggleClass('makeappointment_container_show');
+    $(".cont_make_appointment").fadeToggle();
 });

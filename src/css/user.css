@@ -258,6 +258,7 @@ main > div{
 
 .box_card h2 span{
     font-size: 1.4rem;
+    text-transform: capitalize;
 }
 
 .box_card h3{
@@ -314,34 +315,18 @@ main > div{
     text-align: left;
 }
 
-.makeappointment_container{
-    border-radius: 8px;
-    display: none;
-    /* height: 70vh; */
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0px;
-    background-color: #ffffff;
-    padding: 1rem;
-    width: 40%;
-    margin: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.makeappointment_container_show{
+/* .makeappointment_container_show{
     display: flex;
-}
+} */
 
 .makeappointment{
-    width: 100%;
+    width: 50%;
     margin: auto;
     border: 0.4px solid rgb(124, 124, 124);
     border-radius: 8px;
     padding: 28px;
     position: relative;
+    background-color: #ffffff;
 }
 
 .close_appointment{
@@ -364,7 +349,7 @@ main > div{
 }
 
 #appointment_form>div input, #appointment_form>div textarea{
-    width: 95%;
+    width: 98%;
 }
 
 #appointment_form>div input{
@@ -375,11 +360,71 @@ main > div{
 }
 
 #appointment_form>div:nth-of-type(2) input{
-    width: 45px;
+    width: 120px;
     padding: 4px;
     text-align: center;
 }
 
 #appointment_form>div:nth-of-type(3) input{
     padding: 8px 0px 8px 8px;
+    width: 98%;
+}
+
+.cont_succesful_appointment, .cont_make_appointment{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+.box_succesful_appointment, .box_make_appointment{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.succesful_appointment{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    background-color: #ebf6f8;
+    padding: 2rem;
+    border-radius: 28px;
+    border-style: inset;
+}
+
+#sign_up{
+    cursor: pointer;
+}
+
+.cont_sign_up{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100%;
+    background-color: #ffffff;
+    display: none;
+}
+
+.close_sign_up{
+    position: absolute;
+    right: 50px;
+    top: 25px;
+    color: #000000;
+    font-size: 2rem;
+    width: initial;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.close_sign_up:hover{
+    transform: scale(0.8);
 }

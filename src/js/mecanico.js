@@ -7,18 +7,12 @@ import {
 const appointmentForm = document.getElementById('appointment_form')
 const appointmentsContainer = document.getElementById('cont_cards')
 
-function showLogin() {
-    setTimeout(function () {
-        console.log('HOLA!')
-    }, 1888);
-}
-
-showLogin();
-
-
-
 window.addEventListener('DOMContentLoaded', async () => {
-    /* const querySnapshot = await getAppointments() */
+
+    let email_data = JSON.parse(window.localStorage.getItem('email_user'));
+
+    document.getElementById('user_name_email').innerText = email_data
+
     onGetAppointments((querySnapshot) => {
         let html = ''
 
@@ -37,7 +31,7 @@ window.addEventListener('DOMContentLoaded', async () => {
                                     </div>
                                     <div>
                                         <div>
-                                            <p><span>${appointment.hour_first}</span>:<span>${appointment.hour_second}</span></p>
+                                            <p><span>${appointment.appoint_hour}</span></p>
                                             <i class="fa-solid fa-clock"></i>
                                         </div>
                                         <h3>Dirección <span>${appointment.dir}</span></h3>
@@ -53,14 +47,9 @@ window.addEventListener('DOMContentLoaded', async () => {
                                 <button class="accept_appointment" onclick="accept_appointment()">Aceptar</button>
                             </div>   
                                 `
-            } else {
 
+                appointmentsContainer.innerHTML = html
             }
-
         })
-
-        appointmentsContainer.innerHTML = html
-
     })
-
 })

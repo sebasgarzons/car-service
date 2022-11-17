@@ -3,7 +3,6 @@ import { auth } from '../components/firebase.js'
 
 
 const logout = document.querySelector('#log_out')
-console.log('HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
 
 function log_out(){
     logout.addEventListener('click', async () => {

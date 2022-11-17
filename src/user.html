@@ -25,8 +25,7 @@
                 <p>Usuario</p>
             </div>
             <div id="nav_info_usr">
-                <p>Bienvenido <span>Juan Manuel</span></p>
-                <p class="forgt_psswrd">Olvidé la contraseña</p>
+                <p>Bienvenido <span id="user_name_email"></span></p>
             </div>
             <a class="nav-link logged_in" href="#" id="log_out">
                 <i class="fa-solid fa-power-off"></i>
@@ -42,86 +41,18 @@
                 <div class="box_reserva">
                     <h2>Información de Servicios:</h2>
                 </div>
-                <!--             <div class="box_res_send">
-                <input id="input_reserva" type="text" placeholder="Juan Manuel Garzón" />
-            </div> -->
             </div>
             <div class="cont">
                 <!-- <h5>Información de Servicios:</h5> -->
                 <div class="user" id="cont_cards">
-<!--                     <div class="card_service_user">
-                        <div class="box_card">
-                            <div>
-                                <h2>Tipo de Servicio: <span>Mecánico de Revisión</span></h2>
-                                <h3>Precio: $<span>10000</span></h3>
-                            </div>
-                            <div>
-                                <div>
-                                    <p>10:38</p>
-                                    <i class="fa-solid fa-clock"></i>
-                                </div>
-                                <h3>Dirección <span>Cr 13 # 72 - 31</span></h3>
-                            </div>
-                        </div>
-                        <details class="details" title="Click para ver detalles">
-                            <summary>Ver Detalles de Cita</summary>
-                            <div>
-                                Descripción/Comentarios:
-                                <p>Se necesita cuidado con la tela del acolchado</p>
-                            </div>
-                        </details>
-                    </div>
-                    <div class="card_service_user">
-                        <div class="box_card">
-                            <div>
-                                <h2>Tipo de Servicio: <span>Lavandero</span></h2>
-                                <h3>Precio: $<span>10000</span></h3>
-                            </div>
-                            <div>
-                                <div>
-                                    <p>04:00</p>
-                                    <i class="fa-solid fa-clock"></i>
-                                </div>
-                                <h3>Dirección <span>Diagonal 80 # 93</span></h3>
-                            </div>
-                        </div>
-                        <details class="details" title="Click para ver detalles">
-                            <summary>Ver Detalles de Cita</summary>
-                            <div>
-                                Descripción/Comentarios:
-                                <p>Se necesita cuidado con la tela del acolchado</p>
-                            </div>
-                        </details>
-                    </div>
-                    <div class="card_service_user">
-                        <div class="box_card">
-                            <div>
-                                <h2>Tipo de Servicio: <span>Mecánico de Revisión & Lavandero</span></h2>
-                                <h3>Precio: $<span>30000</span></h3>
-                            </div>
-                            <div>
-                                <div>
-                                    <p>02:07</p>
-                                    <i class="fa-solid fa-clock"></i>
-                                </div>
-                                <h3>Dirección <span>Calle 40 # 8 - 22, Las Américas</span></h3>
-                            </div>
-                        </div>
-                        <details class="details" title="Click para ver detalles">
-                            <summary>Ver Detalles de Cita</summary>
-                            <div>
-                                Descripción/Comentarios:
-                                <p>Se necesita cuidado con la tela del acolchado</p>
-                            </div>
-                        </details>
-                    </div> -->
+
                 </div>
-                <!--  <button id="" onclick="function()">Enviar</button> -->
-                <!--         <button id="btn_send_payments" onclick="post_comment()">Enviar</button>
-     -->
+
             </div>
         </div>
-        <div class="makeappointment_container">
+    </main>
+    <div class="cont_make_appointment">
+        <div class="box_make_appointment">
             <div class="makeappointment">
                 <p class="close_appointment">X</p>
                 <form id="appointment_form">
@@ -134,7 +65,7 @@
                     </div>
                     <div>
                         <label>Hora:</label>
-                        <input name="appoint_hour" type="time" id="appoint_hr">:
+                        <input name="appoint_hour" type="time" id="appoint_hr">
                     </div>
                     <div>
                         <label for="dir">Dirección</label>
@@ -142,12 +73,12 @@
                         <label for="desc">Descripción/Comentarios:</label>
                         <textarea id="appoint-desc" rows="3" placeholder="Descripción/Comentarios"></textarea>
                     </div>
-
+    
                     <button id="btn-appointment-save">Enviar</button>
                 </form>
             </div>
         </div>
-    </main>
+    </div>
     <div class="agndr_ct">
         Agendar Cita
     </div>
